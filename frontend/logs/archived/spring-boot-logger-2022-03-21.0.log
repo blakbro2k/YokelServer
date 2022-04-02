@@ -1,0 +1,946 @@
+2022-03-21 00:08:53,163 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 203720 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:08:53,166 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:08:53,378 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:08:53,379 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:08:53,380 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:08:53,499 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [net.asg.games.yokel.YokelApplication]; nested exception is java.util.InvalidPropertiesFormatException: jdk.internal.org.xml.sax.SAXParseException; An XML properties document must contain the DOCTYPE declaration as defined by java.util.Properties.
+2022-03-21 00:08:53,526 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [net.asg.games.yokel.YokelApplication]; nested exception is java.util.InvalidPropertiesFormatException: jdk.internal.org.xml.sax.SAXParseException; An XML properties document must contain the DOCTYPE declaration as defined by java.util.Properties.
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at net.asg.games.yokel.YokelApplication.main(YokelApplication.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.util.InvalidPropertiesFormatException: jdk.internal.org.xml.sax.SAXParseException; An XML properties document must contain the DOCTYPE declaration as defined by java.util.Properties.
+	at java.base/jdk.internal.util.xml.PropertiesDefaultHandler.load(PropertiesDefaultHandler.java:85)
+	at java.base/java.util.Properties.loadFromXML(Properties.java:960)
+	at org.springframework.util.DefaultPropertiesPersister.loadFromXml(DefaultPropertiesPersister.java:79)
+	at org.springframework.core.io.support.ResourcePropertiesPersister.loadFromXml(ResourcePropertiesPersister.java:60)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:103)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:81)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:67)
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
+	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
+	at org.springframework.context.annotation.ConfigurationClassParser.processPropertySource(ConfigurationClassParser.java:463)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:280)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:199)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:304)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 18 common frames omitted
+Caused by: jdk.internal.org.xml.sax.SAXParseException: An XML properties document must contain the DOCTYPE declaration as defined by java.util.Properties.
+	at java.base/jdk.internal.util.xml.PropertiesDefaultHandler.startDTD(PropertiesDefaultHandler.java:249)
+	at java.base/jdk.internal.util.xml.impl.ParserSAX.docType(ParserSAX.java:554)
+	at java.base/jdk.internal.util.xml.impl.Parser.dtd(Parser.java:550)
+	at java.base/jdk.internal.util.xml.impl.Parser.step(Parser.java:380)
+	at java.base/jdk.internal.util.xml.impl.ParserSAX.parse(ParserSAX.java:436)
+	at java.base/jdk.internal.util.xml.impl.ParserSAX.parse(ParserSAX.java:411)
+	at java.base/jdk.internal.util.xml.impl.ParserSAX.parse(ParserSAX.java:374)
+	at java.base/jdk.internal.util.xml.impl.SAXParserImpl.parse(SAXParserImpl.java:97)
+	at java.base/jdk.internal.util.xml.PropertiesDefaultHandler.load(PropertiesDefaultHandler.java:83)
+	... 34 common frames omitted
+2022-03-21 00:15:20,300 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 205104 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:15:20,302 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:15:20,527 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:15:20,527 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:15:20,527 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:15:21,576 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:15:21,578 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 00:15:21,616 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:15:21,618 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:15:21,619 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:15:21,620 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 38 ms. Found 0 JDBC repository interfaces.
+2022-03-21 00:15:21,628 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:15:21,629 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 00:15:21,753 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 119 ms. Found 3 JPA repository interfaces.
+2022-03-21 00:15:22,209 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @3006ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 00:15:22,526 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 00:15:22,530 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 00:15:22,563 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 00:15:22,563 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2035 ms
+2022-03-21 00:15:22,697 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 00:15:23,821 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 00:15:23,829 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 00:15:23,943 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 00:15:23,943 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 00:15:23,944 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 660000ms
+2022-03-21 00:15:23,955 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@2237d3f3{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.14004721550251811704/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 00:15:23,956 INFO org.eclipse.jetty.server.Server [restartedMain] Started @4754ms
+2022-03-21 00:15:24,641 ERROR org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+2022-03-21 00:15:24,641 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+2022-03-21 00:15:24,643 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-21 00:15:25,161 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-21 00:15:25,164 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Stopped scavenging
+2022-03-21 00:15:25,165 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@2237d3f3{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.14004721550251811704/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 00:15:25,177 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-21 00:15:25,197 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at net.asg.games.yokel.YokelApplication.main(YokelApplication.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+Caused by: org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:515)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:482)
+	at org.hibernate.mapping.Property.isValid(Property.java:231)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:627)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:359)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:314)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 25 common frames omitted
+2022-03-21 00:17:37,467 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 193548 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:17:37,469 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:17:37,669 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:17:37,670 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:17:37,670 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:17:38,584 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:17:38,585 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 00:17:38,615 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:17:38,618 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:17:38,619 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:17:38,620 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
+2022-03-21 00:17:38,628 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:17:38,629 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 00:17:38,738 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 104 ms. Found 3 JPA repository interfaces.
+2022-03-21 00:17:39,183 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @2797ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 00:17:39,493 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 00:17:39,496 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 00:17:39,527 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 00:17:39,528 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1858 ms
+2022-03-21 00:17:39,667 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 00:17:40,687 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 00:17:40,694 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 00:17:40,800 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 00:17:40,801 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 00:17:40,803 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 600000ms
+2022-03-21 00:17:40,814 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@3bd442e2{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.769483625973880185/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 00:17:40,815 INFO org.eclipse.jetty.server.Server [restartedMain] Started @4430ms
+2022-03-21 00:17:41,360 ERROR org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+2022-03-21 00:17:41,360 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+2022-03-21 00:17:41,362 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-21 00:17:41,415 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-21 00:17:41,418 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Stopped scavenging
+2022-03-21 00:17:41,419 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@3bd442e2{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.769483625973880185/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 00:17:41,431 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-21 00:17:41,448 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at net.asg.games.yokel.YokelApplication.main(YokelApplication.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+Caused by: org.hibernate.MappingException: Could not determine type for: net.asg.games.yokel.objects.YokelRoom, at table: yt_table, for columns: [org.hibernate.mapping.Column(room)]
+	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:515)
+	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:482)
+	at org.hibernate.mapping.Property.isValid(Property.java:231)
+	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:627)
+	at org.hibernate.mapping.RootClass.validate(RootClass.java:267)
+	at org.hibernate.boot.internal.MetadataImpl.validate(MetadataImpl.java:359)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:314)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 25 common frames omitted
+2022-03-21 00:20:20,109 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 200436 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:20:20,111 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:20:20,333 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:20:20,333 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:20:20,333 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:20:21,347 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:20:21,348 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 00:20:21,380 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:20:21,382 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:20:21,384 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:20:21,384 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2022-03-21 00:20:21,392 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:20:21,393 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 00:20:21,519 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 120 ms. Found 3 JPA repository interfaces.
+2022-03-21 00:20:22,002 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @3021ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 00:20:22,326 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 00:20:22,329 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 00:20:22,368 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 00:20:22,368 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2034 ms
+2022-03-21 00:20:22,500 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 00:20:23,580 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 00:20:23,587 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 00:20:23,702 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 00:20:23,703 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 00:20:23,704 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 660000ms
+2022-03-21 00:20:23,716 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@396a619e{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.14375158330148901918/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 00:20:23,716 INFO org.eclipse.jetty.server.Server [restartedMain] Started @4736ms
+2022-03-21 00:20:26,038 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:20:26,356 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfiguration': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Rooms' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+2022-03-21 00:20:26,357 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:20:26,360 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-21 00:20:26,761 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-21 00:20:26,764 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Stopped scavenging
+2022-03-21 00:20:26,765 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@396a619e{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.14375158330148901918/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 00:20:26,778 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-21 00:20:26,800 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfiguration': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Rooms' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:719)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at net.asg.games.yokel.YokelApplication.main(YokelApplication.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Rooms' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:719)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:759)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Rooms' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1607)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1460)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1347)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:759)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Rooms' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:170)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1333)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 65 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Rooms' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:91)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:272)
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:167)
+	... 69 common frames omitted
+2022-03-21 00:21:41,397 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 190976 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:21:41,398 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:21:41,595 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:21:41,595 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:21:41,595 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:21:42,479 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:21:42,480 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 00:21:42,508 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:21:42,509 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:21:42,511 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:21:42,512 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
+2022-03-21 00:21:42,519 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:21:42,519 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 00:21:42,629 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 105 ms. Found 3 JPA repository interfaces.
+2022-03-21 00:21:43,039 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @2662ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 00:21:43,331 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 00:21:43,334 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 00:21:43,360 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 00:21:43,361 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1763 ms
+2022-03-21 00:21:43,497 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 00:21:44,546 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 00:21:44,554 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 00:21:44,673 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 00:21:44,674 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 00:21:44,675 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 600000ms
+2022-03-21 00:21:44,686 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@22f6a50f{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.15410034771951989248/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 00:21:44,686 INFO org.eclipse.jetty.server.Server [restartedMain] Started @4310ms
+2022-03-21 00:21:46,068 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:21:46,370 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfiguration': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+2022-03-21 00:21:46,371 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:21:46,373 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-21 00:21:46,497 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-21 00:21:46,500 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Stopped scavenging
+2022-03-21 00:21:46,501 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@22f6a50f{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.15410034771951989248/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 00:21:46,503 WARN org.eclipse.jetty.util.thread.QueuedThreadPool [restartedMain] Stopped without executing or closing null
+2022-03-21 00:21:46,514 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-21 00:21:46,534 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfiguration': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:719)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at net.asg.games.yokel.YokelApplication.main(YokelApplication.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:719)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:759)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1607)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1460)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1347)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.resolveMethodArguments(AutowiredAnnotationBeanPostProcessor.java:759)
+	... 48 common frames omitted
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:170)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1333)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 65 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:91)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:272)
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:167)
+	... 69 common frames omitted
+2022-03-21 00:22:17,969 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 203872 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:22:17,971 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:22:18,214 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:22:18,214 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:22:18,215 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:22:19,302 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:22:19,304 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 00:22:19,339 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:22:19,341 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:22:19,343 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:22:19,344 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 36 ms. Found 0 JDBC repository interfaces.
+2022-03-21 00:22:19,352 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:22:19,353 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 00:22:19,477 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 119 ms. Found 3 JPA repository interfaces.
+2022-03-21 00:22:19,997 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @3358ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 00:22:20,341 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 00:22:20,347 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 00:22:20,391 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 00:22:20,391 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2176 ms
+2022-03-21 00:22:20,576 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 00:22:21,652 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 00:22:21,660 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 00:22:21,796 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 00:22:21,796 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 00:22:21,798 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 660000ms
+2022-03-21 00:22:21,814 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@7c52acd5{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.3681987460452222047/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 00:22:21,814 INFO org.eclipse.jetty.server.Server [restartedMain] Started @5177ms
+2022-03-21 00:22:23,762 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:22:24,194 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-21 00:22:25,843 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
+2022-03-21 00:22:25,916 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-21 00:22:25,924 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-21 00:22:25,984 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-21 00:22:25,984 INFO org.springframework.web.servlet.FrameworkServlet [restartedMain] Initializing Servlet 'dispatcherServlet'
+2022-03-21 00:22:25,986 INFO org.springframework.web.servlet.FrameworkServlet [restartedMain] Completed initialization in 1 ms
+2022-03-21 00:22:26,018 INFO org.eclipse.jetty.server.AbstractConnector [restartedMain] Started ServerConnector@7b367e76{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-03-21 00:22:26,019 INFO org.springframework.boot.web.embedded.jetty.JettyWebServer [restartedMain] Jetty started on port(s) 8080 (http/1.1) with context path '/'
+2022-03-21 00:22:26,034 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started YokelApplication in 8.564 seconds (JVM running for 9.397)
+2022-03-21 00:24:26,763 INFO org.eclipse.jetty.server.AbstractConnector [SpringApplicationShutdownHook] Stopped ServerConnector@7b367e76{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-03-21 00:24:26,763 INFO org.eclipse.jetty.server.session.HouseKeeper [SpringApplicationShutdownHook] node0 Stopped scavenging
+2022-03-21 00:24:26,765 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [SpringApplicationShutdownHook] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-03-21 00:24:26,765 INFO org.eclipse.jetty.server.handler.ContextHandler [SpringApplicationShutdownHook] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@7c52acd5{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.3681987460452222047/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 00:24:26,781 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:24:26,784 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-03-21 00:24:26,793 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-03-21 00:28:47,974 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 202360 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:28:47,975 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:28:48,177 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:28:48,178 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:28:48,178 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:28:49,156 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:28:49,157 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 00:28:49,190 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:28:49,192 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:28:49,194 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:28:49,194 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 33 ms. Found 0 JDBC repository interfaces.
+2022-03-21 00:28:49,202 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:28:49,203 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 00:28:49,325 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 117 ms. Found 3 JPA repository interfaces.
+2022-03-21 00:28:49,758 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @2922ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 00:28:50,064 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 00:28:50,068 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 00:28:50,100 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 00:28:50,100 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1922 ms
+2022-03-21 00:28:50,229 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 00:28:51,283 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 00:28:51,290 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 00:28:51,414 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 00:28:51,415 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 00:28:51,416 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 660000ms
+2022-03-21 00:28:51,428 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@33a1e1cf{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.6390323148362640620/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 00:28:51,428 INFO org.eclipse.jetty.server.Server [restartedMain] Started @4593ms
+2022-03-21 00:28:52,914 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:28:53,216 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-21 00:28:53,256 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+2022-03-21 00:28:53,257 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:28:53,259 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-21 00:28:53,276 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-21 00:28:53,280 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Stopped scavenging
+2022-03-21 00:28:53,281 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@33a1e1cf{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.6390323148362640620/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 00:28:53,294 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-21 00:28:53,312 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tableConfig': Unsatisfied dependency expressed through field 'rooms'; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:659)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:639)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at net.asg.games.yokel.YokelApplication.main(YokelApplication.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:170)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1631)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1333)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:656)
+	... 25 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'Lounge' cannot be found on object of type 'org.springframework.beans.factory.config.BeanExpressionContext' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:217)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:91)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:272)
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:167)
+	... 29 common frames omitted
+2022-03-21 00:31:34,003 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 182172 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:31:34,005 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:31:34,199 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:31:34,200 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:31:34,200 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:31:35,114 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:31:35,115 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 00:31:35,144 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:31:35,146 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:31:35,147 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:31:35,148 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
+2022-03-21 00:31:35,155 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:31:35,156 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 00:31:35,266 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 107 ms. Found 3 JPA repository interfaces.
+2022-03-21 00:31:35,694 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @2812ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 00:31:35,984 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 00:31:35,987 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 00:31:36,016 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 00:31:36,017 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1817 ms
+2022-03-21 00:31:36,130 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 00:31:37,155 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 00:31:37,162 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 00:31:37,274 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 00:31:37,274 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 00:31:37,275 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 600000ms
+2022-03-21 00:31:37,286 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@23ef9f88{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.15265946069483160206/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 00:31:37,287 INFO org.eclipse.jetty.server.Server [restartedMain] Started @4406ms
+2022-03-21 00:31:38,666 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:31:38,948 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-21 00:31:38,969 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tableConfig' defined in file [U:\yokel\target\classes\net\asg\games\yokel\config\TableConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$fe32e3cc]: Constructor threw exception; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.core.io.Resource.getFile()" because "this.resource" is null
+2022-03-21 00:31:38,970 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:31:38,973 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-21 00:31:39,145 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-21 00:31:39,149 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Stopped scavenging
+2022-03-21 00:31:39,150 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@23ef9f88{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.15265946069483160206/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 00:31:39,153 WARN org.eclipse.jetty.util.thread.QueuedThreadPool [restartedMain] Stopped without executing or closing null
+2022-03-21 00:31:39,165 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-21 00:31:39,183 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tableConfig' defined in file [U:\yokel\target\classes\net\asg\games\yokel\config\TableConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$fe32e3cc]: Constructor threw exception; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.core.io.Resource.getFile()" because "this.resource" is null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at net.asg.games.yokel.YokelApplication.main(YokelApplication.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$fe32e3cc]: Constructor threw exception; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.core.io.Resource.getFile()" because "this.resource" is null
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.core.io.Resource.getFile()" because "this.resource" is null
+	at net.asg.games.yokel.config.TableConfig.<init>(TableConfig.java:23)
+	at net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$fe32e3cc.<init>(<generated>)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 24 common frames omitted
+2022-03-21 00:31:47,205 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 200612 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:31:47,207 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:31:47,400 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:31:47,400 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:31:47,400 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:31:48,269 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:31:48,270 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 00:31:48,299 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:31:48,300 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:31:48,302 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:31:48,303 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 30 ms. Found 0 JDBC repository interfaces.
+2022-03-21 00:31:48,310 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:31:48,311 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 00:31:48,423 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 107 ms. Found 3 JPA repository interfaces.
+2022-03-21 00:31:48,820 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @2643ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 00:31:49,105 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 00:31:49,108 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 00:31:49,134 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 00:31:49,134 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1733 ms
+2022-03-21 00:31:49,252 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 00:31:50,297 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 00:31:50,305 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 00:31:50,410 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 00:31:50,411 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 00:31:50,413 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 660000ms
+2022-03-21 00:31:50,424 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@78407ee5{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.9333964276190592760/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 00:31:50,425 INFO org.eclipse.jetty.server.Server [restartedMain] Started @4248ms
+2022-03-21 00:31:51,669 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:31:51,951 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-21 00:31:51,972 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tableConfig' defined in file [U:\yokel\target\classes\net\asg\games\yokel\config\TableConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$b8089aea]: Constructor threw exception; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.core.io.Resource.getFile()" because "this.resource" is null
+2022-03-21 00:31:51,972 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:31:51,974 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-21 00:31:52,280 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-21 00:31:52,285 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Stopped scavenging
+2022-03-21 00:31:52,286 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@78407ee5{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.9333964276190592760/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 00:31:52,299 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-21 00:31:52,317 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tableConfig' defined in file [U:\yokel\target\classes\net\asg\games\yokel\config\TableConfig.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$b8089aea]: Constructor threw exception; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.core.io.Resource.getFile()" because "this.resource" is null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at net.asg.games.yokel.YokelApplication.main(YokelApplication.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$b8089aea]: Constructor threw exception; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.core.io.Resource.getFile()" because "this.resource" is null
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 22 common frames omitted
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.core.io.Resource.getFile()" because "this.resource" is null
+	at net.asg.games.yokel.config.TableConfig.<init>(TableConfig.java:23)
+	at net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$b8089aea.<init>(<generated>)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 24 common frames omitted
+2022-03-21 00:32:25,760 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 204984 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 00:32:25,762 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 00:32:25,948 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 00:32:25,949 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 00:32:25,949 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 00:32:26,917 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:32:26,918 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 00:32:26,956 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:32:26,958 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:32:26,960 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 00:32:26,962 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 39 ms. Found 0 JDBC repository interfaces.
+2022-03-21 00:32:26,970 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 00:32:26,971 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 00:32:27,107 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 130 ms. Found 3 JPA repository interfaces.
+2022-03-21 00:32:27,586 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @2862ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 00:32:27,876 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 00:32:27,878 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 00:32:27,906 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 00:32:27,906 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1956 ms
+2022-03-21 00:32:28,027 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 00:32:29,081 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 00:32:29,089 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 00:32:29,188 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 00:32:29,188 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 00:32:29,189 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 600000ms
+2022-03-21 00:32:29,200 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@3d7910b5{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.12196501578828255767/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 00:32:29,200 INFO org.eclipse.jetty.server.Server [restartedMain] Started @4477ms
+2022-03-21 00:32:30,449 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 00:32:30,739 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-21 00:32:32,087 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
+2022-03-21 00:32:32,157 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-21 00:32:32,163 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-21 00:32:32,207 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-21 00:32:32,207 INFO org.springframework.web.servlet.FrameworkServlet [restartedMain] Initializing Servlet 'dispatcherServlet'
+2022-03-21 00:32:32,209 INFO org.springframework.web.servlet.FrameworkServlet [restartedMain] Completed initialization in 1 ms
+2022-03-21 00:32:32,240 INFO org.eclipse.jetty.server.AbstractConnector [restartedMain] Started ServerConnector@591265e6{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-03-21 00:32:32,241 INFO org.springframework.boot.web.embedded.jetty.JettyWebServer [restartedMain] Jetty started on port(s) 8080 (http/1.1) with context path '/'
+2022-03-21 00:32:32,254 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started YokelApplication in 6.929 seconds (JVM running for 7.531)
+2022-03-21 07:49:48,086 INFO org.eclipse.jetty.server.AbstractConnector [SpringApplicationShutdownHook] Stopped ServerConnector@591265e6{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-03-21 07:49:48,088 INFO org.eclipse.jetty.server.session.HouseKeeper [SpringApplicationShutdownHook] node0 Stopped scavenging
+2022-03-21 07:49:48,091 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [SpringApplicationShutdownHook] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-03-21 07:49:48,092 INFO org.eclipse.jetty.server.handler.ContextHandler [SpringApplicationShutdownHook] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@3d7910b5{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.12196501578828255767/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 07:49:48,121 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 07:49:48,133 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-03-21 07:49:48,143 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-03-21 07:53:58,789 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 225208 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 07:53:58,791 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 07:53:59,058 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 07:53:59,058 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 07:53:59,058 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 07:54:00,069 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 07:54:00,071 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 07:54:00,112 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 07:54:00,115 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 07:54:00,117 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 07:54:00,120 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 41 ms. Found 0 JDBC repository interfaces.
+2022-03-21 07:54:00,129 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 07:54:00,130 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 07:54:00,257 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 118 ms. Found 3 JPA repository interfaces.
+2022-03-21 07:54:00,822 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @3539ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 07:54:01,197 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 07:54:01,199 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 07:54:01,237 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 07:54:01,237 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2178 ms
+2022-03-21 07:54:01,396 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 07:54:02,454 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 07:54:02,462 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 07:54:02,577 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 07:54:02,578 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 07:54:02,579 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 660000ms
+2022-03-21 07:54:02,590 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@5296a334{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.1700425294220428322/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 07:54:02,590 INFO org.eclipse.jetty.server.Server [restartedMain] Started @5308ms
+2022-03-21 07:54:04,313 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 07:54:04,615 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-21 07:54:06,181 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
+2022-03-21 07:54:06,250 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-03-21 07:54:06,256 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-21 07:54:06,302 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-21 07:54:06,302 INFO org.springframework.web.servlet.FrameworkServlet [restartedMain] Initializing Servlet 'dispatcherServlet'
+2022-03-21 07:54:06,304 INFO org.springframework.web.servlet.FrameworkServlet [restartedMain] Completed initialization in 2 ms
+2022-03-21 07:54:06,333 INFO org.eclipse.jetty.server.AbstractConnector [restartedMain] Started ServerConnector@7457fc07{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-03-21 07:54:06,334 INFO org.springframework.boot.web.embedded.jetty.JettyWebServer [restartedMain] Jetty started on port(s) 8080 (http/1.1) with context path '/'
+2022-03-21 07:54:06,350 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started YokelApplication in 8.183 seconds (JVM running for 9.068)
+2022-03-21 08:04:58,759 INFO org.eclipse.jetty.server.AbstractConnector [SpringApplicationShutdownHook] Stopped ServerConnector@7457fc07{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-03-21 08:04:58,760 INFO org.eclipse.jetty.server.session.HouseKeeper [SpringApplicationShutdownHook] node0 Stopped scavenging
+2022-03-21 08:04:58,761 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [SpringApplicationShutdownHook] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-03-21 08:04:58,761 INFO org.eclipse.jetty.server.handler.ContextHandler [SpringApplicationShutdownHook] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@5296a334{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.1700425294220428322/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 08:04:58,777 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 08:04:58,781 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-03-21 08:04:58,789 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2022-03-21 08:05:03,348 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting YokelApplication using Java 17.0.2 on Blakbro2k-PC with PID 222948 (U:\yokel\target\classes started by Blakbro2k in U:\yokel\frontend)
+2022-03-21 08:05:03,350 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-21 08:05:03,571 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Blakbro2k\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.3.0.0\ojdbc8-21.3.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Blakbro2k/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.3.0.0/oraclepki.jar
+2022-03-21 08:05:03,572 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-21 08:05:03,572 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-21 08:05:04,617 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 08:05:04,619 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-03-21 08:05:04,653 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelPlayerRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 08:05:04,655 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelRoomRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 08:05:04,657 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface net.asg.games.yokel.persistence.YokelTableRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-03-21 08:05:04,658 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 35 ms. Found 0 JDBC repository interfaces.
+2022-03-21 08:05:04,666 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-03-21 08:05:04,667 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-21 08:05:04,801 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 128 ms. Found 3 JPA repository interfaces.
+2022-03-21 08:05:05,270 INFO org.eclipse.jetty.util.log.Log [restartedMain] Logging initialized @3094ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-03-21 08:05:05,592 INFO org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory [restartedMain] Server initialized with port: 8080
+2022-03-21 08:05:05,595 INFO org.eclipse.jetty.server.Server [restartedMain] jetty-9.4.45.v20220203; built: 2022-02-03T09:14:34.105Z; git: 4a0c91c0be53805e3fcffdcdcc9587d5301863db; jvm 17.0.2+8-LTS-86
+2022-03-21 08:05:05,625 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-21 08:05:05,625 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2052 ms
+2022-03-21 08:05:05,759 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-03-21 08:05:06,911 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-03-21 08:05:06,920 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [restartedMain] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://108.167.142.44:3306/boaten01_ytowers'
+2022-03-21 08:05:07,043 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] DefaultSessionIdManager workerName=node0
+2022-03-21 08:05:07,043 INFO org.eclipse.jetty.server.session.DefaultSessionIdManager [restartedMain] No SessionScavenger set, using defaults
+2022-03-21 08:05:07,044 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Scavenging every 660000ms
+2022-03-21 08:05:07,057 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Started o.s.b.w.e.j.JettyEmbeddedWebAppContext@6cdc18c8{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.10958942536019562249/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],AVAILABLE}
+2022-03-21 08:05:07,057 INFO org.eclipse.jetty.server.Server [restartedMain] Started @4881ms
+2022-03-21 08:05:08,661 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 08:05:08,954 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-21 08:05:09,103 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loadRooms' defined in class path resource [net/asg/games/yokel/config/TableConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.lang.Object]: Factory method 'loadRooms' threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (StringReader); line: 1, column: 368] (through reference chain: net.asg.games.yokel.data.RoomConfigDTO["Lounge"])
+2022-03-21 08:05:09,104 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-21 08:05:09,106 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2022-03-21 08:05:09,385 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2022-03-21 08:05:09,389 INFO org.eclipse.jetty.server.session.HouseKeeper [restartedMain] node0 Stopped scavenging
+2022-03-21 08:05:09,390 INFO org.eclipse.jetty.server.handler.ContextHandler [restartedMain] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@6cdc18c8{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.10958942536019562249/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-21 08:05:09,406 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-21 08:05:09,427 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loadRooms' defined in class path resource [net/asg/games/yokel/config/TableConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.lang.Object]: Factory method 'loadRooms' threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (StringReader); line: 1, column: 368] (through reference chain: net.asg.games.yokel.data.RoomConfigDTO["Lounge"])
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at net.asg.games.yokel.YokelApplication.main(YokelApplication.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [java.lang.Object]: Factory method 'loadRooms' threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (StringReader); line: 1, column: 368] (through reference chain: net.asg.games.yokel.data.RoomConfigDTO["Lounge"])
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 24 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (StringReader); line: 1, column: 368] (through reference chain: net.asg.games.yokel.data.RoomConfigDTO["Lounge"])
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1420)
+	at com.fasterxml.jackson.dataformat.xml.deser.XmlStringDeserializer.deserialize(XmlStringDeserializer.java:60)
+	at com.fasterxml.jackson.dataformat.xml.deser.XmlStringDeserializer.deserialize(XmlStringDeserializer.java:18)
+	at com.fasterxml.jackson.databind.deser.SettableAnyProperty.deserialize(SettableAnyProperty.java:153)
+	at com.fasterxml.jackson.databind.deser.SettableAnyProperty.deserializeAndSet(SettableAnyProperty.java:134)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1672)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:319)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3597)
+	at net.asg.games.yokel.config.TableConfig.loadRooms(TableConfig.java:33)
+	at net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$36ba4b87.CGLIB$loadRooms$2(<generated>)
+	at net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$36ba4b87$$FastClassBySpringCGLIB$$7c2e7a3b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at net.asg.games.yokel.config.TableConfig$$EnhancerBySpringCGLIB$$36ba4b87.loadRooms(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted

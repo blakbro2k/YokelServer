@@ -1,0 +1,7 @@
+2022-03-28 01:39:34,133 INFO org.eclipse.jetty.server.AbstractConnector [SpringApplicationShutdownHook] Stopped ServerConnector@2b4ec038{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-03-28 01:39:34,299 INFO org.eclipse.jetty.server.session.HouseKeeper [SpringApplicationShutdownHook] node0 Stopped scavenging
+2022-03-28 01:39:34,612 INFO org.eclipse.jetty.server.handler.ContextHandler$Context [SpringApplicationShutdownHook] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-03-28 01:39:34,682 INFO org.eclipse.jetty.server.handler.ContextHandler [SpringApplicationShutdownHook] Stopped o.s.b.w.e.j.JettyEmbeddedWebAppContext@4e60d0bb{application,/,[file:///C:/Users/Blakbro2k/AppData/Local/Temp/jetty-docbase.8080.2786814951301911298/, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/bootstrap/3.3.7/bootstrap-3.3.7.jar!/META-INF/resources, jar:file:/C:/Users/Blakbro2k/.m2/repository/org/webjars/jquery/3.2.1/jquery-3.2.1.jar!/META-INF/resources],STOPPED}
+2022-03-28 01:39:37,506 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-28 01:39:38,187 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-03-28 01:39:38,220 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

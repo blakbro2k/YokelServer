@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+          "http://www.hibernate.org/dtd/hibernate-configuration">  
+  
+<hibernate-configuration>  
+  
+    <session-factory>  
+        <property name="hbm2ddl.auto">update</property>  
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>  
+        <property name="connection.url">jdbc:mysql://108.167.142.44:3306/boaten01_ytowers</property>  
+        <property name="connection.username">boaten01_93f3_cg</property>  
+        <property name="connection.password">Th!sl3nog0lfe</property>  
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>  
+
+    	<mapping resource="YokelRoom.hbm.xml"/>
+    </session-factory>  
+  
+</hibernate-configuration>
